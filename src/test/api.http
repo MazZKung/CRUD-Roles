@@ -1,0 +1,113 @@
+//Homework project structure + validator
+###
+GET http://localhost:3000/api/products
+
+###
+GET http://localhost:3000/api/products/5
+
+//Post
+###
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+  "ID" : 12345,
+  "ProdeuctName" : "Laptop",
+  "Price" : "45000.00",
+  "Cost" : "40000.00",
+  "Note" : "Too expensive!!!"
+}
+
+###
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+  "ID" : "12342",
+  "ProdeuctName" : "Lap",
+  "Price" : "45000",
+  "Cost" : "40000.000",
+  "Note" : "Too expensive!!!"
+}
+
+
+###
+GET http://localhost:3000/api/user
+
+###
+GET http://localhost:3000/api/user/123
+
+###
+//ทดสอบกรณีที่ user ไม่พบ
+GET http://localhost:3000/api/user/999
+
+###
+//สร้าง user ใหม่ที่ถูกต้อง
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+  "name": "user0155",
+  "password": "securepassword",
+  "firstname": "U015first",
+  "lastname": "U015last"
+}
+
+###
+//สร้าง user ใหม่ที่ไม่ถูกต้อง
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+  "password": "user1234",
+  "firstname": "Johfwfwfwfasfn",
+  "lastname": "Doewfwfwefwe"
+}
+
+###
+PUT http://localhost:3000/api/users/9
+
+{
+    "username": "user0",
+    "password" : "4512222",
+    "firstname": "",
+    "lastname": ""
+}
+###
+DELETE http://localhost:3000/api/users/9
+
+###
+GET http://localhost:3000/api/roles
+
+###
+GET http://localhost:3000/api/roles/1
+
+###
+GET http://localhost:3000/api/roles/999
+
+###
+// สร้าง role ใหม่ที่ถูกต้อง
+POST http://localhost:3000/api/roles
+Content-Type: application/json
+
+{
+    "name" : "admin naja"
+}
+
+###
+// สร้าง role ใหม่ที่ไม่ถูกต้อง
+POST http://localhost:3000/api/roles
+Content-Type: application/json
+
+{
+    "name" : "22"
+}
+
+###
+PUT http://localhost:3000/api/roles/5
+
+{
+    "name" : "admin"
+}
+###
+DELETE http://localhost:3000/api/roles/5
