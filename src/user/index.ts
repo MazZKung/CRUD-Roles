@@ -70,5 +70,6 @@ userRoutes.post('/',
 
         return c.json({ message: 'User created', data: newUser });
     })
+        
 
 export default userRoutes;

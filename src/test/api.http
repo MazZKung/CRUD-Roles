@@ -1,45 +1,46 @@
+
 //Homework project structure + validator
 ###
-GET http://localhost:3000/api/products
+#GET http://localhost:3000/api/products
 
 ###
-GET http://localhost:3000/api/products/5
+#GET http://localhost:3000/api/products/5
 
 //Post
 ###
-POST http://localhost:3000/api/products
-Content-Type: application/json
+#POST http://localhost:3000/api/products
+#Content-Type: application/json
 
-{
-  "ID" : 12345,
-  "ProdeuctName" : "Laptop",
-  "Price" : "45000.00",
-  "Cost" : "40000.00",
-  "Note" : "Too expensive!!!"
-}
-
-###
-POST http://localhost:3000/api/products
-Content-Type: application/json
-
-{
-  "ID" : "12342",
-  "ProdeuctName" : "Lap",
-  "Price" : "45000",
-  "Cost" : "40000.000",
-  "Note" : "Too expensive!!!"
-}
-
+#{
+#  "ID" : 12345,
+#  "ProdeuctName" : "Laptop",
+#  "Price" : "45000.00",
+#  "Cost" : "40000.00",
+#  "Note" : "Too expensive!!!"
+#}
 
 ###
-GET http://localhost:3000/api/user
+#POST http://localhost:3000/api/products
+#Content-Type: application/json
+
+#{
+#  "ID" : "12342",
+#  "ProdeuctName" : "Lap",
+#  "Price" : "45000",
+#  "Cost" : "40000.000",
+#  "Note" : "Too expensive!!!"
+#}
+
 
 ###
-GET http://localhost:3000/api/user/123
+#GET http://localhost:3000/api/user
+
+###
+#GET http://localhost:3000/api/user/123
 
 ###
 //ทดสอบกรณีที่ user ไม่พบ
-GET http://localhost:3000/api/user/999
+#GET http://localhost:3000/api/user/999
 
 ###
 //สร้าง user ใหม่ที่ถูกต้อง
@@ -65,7 +66,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/api/users/9
+PUT http://localhost:3000/api/user/9
 
 {
     "username": "user0",
@@ -87,16 +88,16 @@ GET http://localhost:3000/api/roles/999
 
 ###
 // สร้าง role ใหม่ที่ถูกต้อง
-POST http://localhost:3000/api/roles
+POST http://localhost:3000/api/Roles
 Content-Type: application/json
 
 {
-    "name" : "admin naja"
+    "name" : "admin lor"
 }
 
 ###
 // สร้าง role ใหม่ที่ไม่ถูกต้อง
-POST http://localhost:3000/api/roles
+POST http://localhost:3000/api/Roles
 Content-Type: application/json
 
 {
@@ -104,10 +105,10 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/api/roles/5
+PUT http://localhost:3000/api/Roles/5
 
 {
     "name" : "admin"
 }
 ###
-DELETE http://localhost:3000/api/roles/5
+DELETE http://localhost:3000/api/Roles/5
